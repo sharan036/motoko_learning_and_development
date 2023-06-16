@@ -73,7 +73,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="About" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Comments" onClick={handleClick}>
                             <h3>01. Comments</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
@@ -102,7 +102,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Strings" onClick={handleClick}>
                             <h3>02. Strings</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
@@ -185,8 +185,8 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
-                            <h3>02. Strings</h3>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Booleans" onClick={handleClick}>
+                            <h3>03. Booleans</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
                                     <img src={motokoImg} alt="Image" />
@@ -240,7 +240,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Integers" onClick={handleClick}>
                             <h3>04. Integers</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
@@ -318,7 +318,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Bounded-integers" onClick={handleClick}>
                             <h3>05. Bounded integers</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
@@ -398,7 +398,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Floats" onClick={handleClick}>
                             <h3>06. Floats</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
@@ -461,7 +461,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Actors" onClick={handleClick}>
                             <h3>07. Actors and async data</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
@@ -530,7 +530,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Contact" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Mutable-state" onClick={handleClick}>
                             <h3>08. Mutable state</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">

@@ -40,8 +40,8 @@ function Header() {
             <Nav.Link href="#Integers" active={activeSection === 'Home'}>Integers</Nav.Link>
             <Nav.Link href="#Bounded-integers" active={activeSection === 'Home'}>Bounded integers</Nav.Link>
             <Nav.Link href="#Floats" active={activeSection === 'Home'}>Floats</Nav.Link>
-            <Nav.Link href="#Strings" active={activeSection === 'Home'}>Actors </Nav.Link>
-            <Nav.Link href="#Strings" active={activeSection === 'Home'}>Mutable state</Nav.Link>
+            <Nav.Link href="#Actors" active={activeSection === 'Home'}>Actors </Nav.Link>
+            <Nav.Link href="#Mutable-state" active={activeSection === 'Home'}>Mutable state</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#deets">More deets</Nav.Link>
