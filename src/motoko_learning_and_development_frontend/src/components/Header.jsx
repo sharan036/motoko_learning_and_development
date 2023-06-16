@@ -42,6 +42,7 @@ function Header() {
             <Nav.Link href="#Floats" active={activeSection === 'Home'}>Floats</Nav.Link>
             <Nav.Link href="#Actors" active={activeSection === 'Home'}>Actors </Nav.Link>
             <Nav.Link href="#Mutable-state" active={activeSection === 'Home'}>Mutable state</Nav.Link>
+            <Nav.Link href="#Imperative_control_flow" active={activeSection === 'Home'}>Imperative control flow</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#deets">More deets</Nav.Link>

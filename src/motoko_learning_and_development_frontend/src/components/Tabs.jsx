@@ -632,7 +632,7 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Mutable-state" onClick={handleClick}>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Imperative_control_flow" onClick={handleClick}>
                             <h3>09. Imperative control flow</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
