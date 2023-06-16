@@ -45,23 +45,32 @@ module.exports = {
   // modules and CSS as described in the "Adding a stylesheet"
   // tutorial, uncomment the following lines:
   module: {
-   rules: [
-     { test: /\.(ts|tsx|jsx)$/, loader: "ts-loader" },
-     { test: /\.css$/, use: ['style-loader','css-loader'] },
-     {
-      test: /\.(jpg|jpeg)$/,
-      use: [
-        {
+    rules: [
+      { test: /\.(ts|tsx|jsx)$/, loader: "ts-loader" },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      {
+        test: /\.svg$/, use: {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'assets/images/',
-            publicPath: 'assets/images/',
+            outputPath: 'assets/images/', // Change the output path as needed
           },
         },
-      ],
-    }
-   ]
+      },
+      {
+        test: /\.(png|jpg|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/',
+              publicPath: 'assets/images/',
+            },
+          },
+        ],
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
