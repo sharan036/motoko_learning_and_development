@@ -632,6 +632,117 @@ const Tabs = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className={`recr-content ${activeTab === 'Home' ? 'active' : ''}`} id="Mutable-state" onClick={handleClick}>
+                            <h3>09. Imperative control flow</h3>
+                            <div className="work_items_content">
+                                <div className="vert_tab_image_wrrapeer">
+                                    <div className="vert-tab-content">
+                                        <h2>09.</h2>
+                                        <h4>Imperative control flow</h4>
+                                        <p>There are two key categories of control flow:</p>
+                                        <ul>
+                                            <li>declarative, when the structure of some value guides control and the selection of the next expression to evaluate, like in if and switch expressions;</li>
+                                            <li>imperative where control changes abruptly according to a programmer’s command, abondoning regular control flow; examples are break and continue, but also return and throw.</li>
+                                        </ul>
+                                        <p>Imperative control flow often goes hand-in-hand with state changes and other flavors of side-effects, such as error handling and input/output.</p>
+                                        <h4>Early return from func</h4>
+                                        <p>Normally, the result of a function is the value of its body. Sometimes, during evaluation of the body, the result is available before the end of evaluation. In such situations the return &lt;exp&gt; construct can be used to abandon the rest of the computation and immediately exit the function with a result. Similarly, where permitted, throw may be used to abandon a computation with an error.<br/>When a function has unit result type, the shorthand return may be used instead of the equivalent return ().</p>
+                                        <h4>Loops and labels</h4>
+                                        <p>Motoko provides several kinds of repetition constructs, including:</p>
+                                        <ul>
+                                            <li><b>for</b> expressions for iterating over members of structured data.</li>
+                                            <li><b>loop</b> expressions for programmatic repetition (optionally with termination condition).</li>
+                                            <li><b>while</b> loops for programmatic repetition with entry condition.</li>
+
+                                        </ul>
+                                        <p>Any of these can be prefixed with a label &lt;name&gt; qualifier to give the loop a symbolic name. Named loops are useful for imperatively changing control flow to continue from the entry or exit of the named loop.</p>
+                                        <ul>
+                                            <li>re-entering the loop with continue &lt;name&gt;, or</li>
+                                            <li>exiting the loop altogether with break &lt;name&gt;.</li>
+                                        </ul>
+                                        <p>In the following example, the for expression loops over characters of some text and abandons iteration as soon as an exclamation sign is encountered.</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">import Debug "mo:base/Debug";<br/>label letters for (c in "ran!!dom".chars()) &#123;<br/>Debug.print(debug_show(c));<br/> if (c == '!') &#123; break letters &#125;;<br/>  // ...<br/>  &#125;</p>
+                                            </div>                                      
+                                        </div>
+                                        <h4>Labeled expressions</h4>
+                                        <p>There are two other facets to label​s that are less mainstream, but come in handy in certain situations:</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">import Text "mo:base/Text";<br/>import Iter "mo:base/Iter";<br/> type Host = Text;<br/>let formInput = "us@dfn";<br/> let address = label exit : ?(Text, Host) &#123;<br/>  let splitted = Text.split(formInput, #char '@');<br/> let array = Iter.toArray&lt;Text&gt;(splitted);<br/>  if (array.size() != 2) &#123; break exit(null) &#125;;<br/>  let account = array[0];<br/>  let host = array[1];<br/>  // if (not (parseHost(host))) &#123; break exit(null) &#125;;<br/>  ?(account, host)<br/>  &#125;</p>
+                                            </div>
+                                        </div>
+                                        <h4>Repetition with loop</h4>
+                                        <p>The simplest way to indefinitely repeat a sequence of imperative expressions is by using a loop construct</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">loop &#123; &lt;expr1&gt;; &lt;expr2&gt;; ... &#125;</p>
+                                            </div>
+                                            <p>The loop can only be abandoned with a return or break construct.<br/>A re-entry condition can be affixed to allow a conditional repetition of the loop with loop &lt;body&gt; while &lt;cond&gt;.<br/>The body of such a loop is always executed at least once.</p>                                                                            
+                                        </div>
+                                        <h4>while loops with precondition</h4>
+                                        <p>Sometimes an entry condition is needed to guard the first execution of a loop. For this kind of repetition the while &lt;cond&gt; &lt;body&gt;-flavor is available</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">while (earned &lt; need) &#123; earned += earn() &#125;;</p>
+                                            </div>                                                                            
+                                        </div>
+                                        <p>Unlike a loop, the body of a while loop may never be executed.</p>
+                                        <h4>for loops for iteration</h4>
+                                        <p>An iteration over elements of some homogeneous collection can be performed using a for loop. The values are drawn from an iterator and bound to the loop pattern in turn.</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">let carsInStock = &lbrack;&nbsp;  ("Buick", 2020, 23.000),&nbsp;("Toyota", 2019, 17.500),&nbsp;("Audi", 2020, 34.900)&rbrack;;<br/>var inventory : &#123; var value : Float &#125; = &#123; var value = 0.0 &#125;;<br/>for ((model, year, price) in carsInStock.vals()) &#123;<br/>&nbsp;&nbsp; inventory.value += price;<br/>&#125;;<br/>inventory</p>
+                                            </div>
+                                        </div>
+                                        <h4>Using range with a for loop</h4>
+                                        <p>The range function produces an iterator (of type Iter&lt;Nat&gt;) with the given lower and upper bound, inclusive.<br/>The following loop example prints the numbers 0 through 10 over its eleven iterations:</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">import Iter "mo:base/Iter";<br/>import Debug "mo:base/Debug";<br/>var i = 0;<br/>for (j in Iter.range(0, 10)) &#123;<br/>&nbsp;&nbsp;Debug.print(debug_show(j));<br/>&nbsp;&nbsp;assert(j == i);<br/>&nbsp;&nbsp;i += 1;<br/>&#125;;<br/>assert(i == 11);</p>
+                                            </div>
+                                        </div>
+                                        <p>The array a above holds three natural numbers, and has type [Nat]. In general, the type of an immutable array is [_], using square brackets around the type of the array’s elements, which must share a single common type, in this case Nat.</p>
+                                        <h4>Project from (read from) an array index</h4>
+                                        <p>We can project from (read from) an array using the usual bracket syntax ([ and ]) around the index we want to access:</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">let x : Nat = a[2] + a[0] ;</p>
+                                            </div>
+                                        </div>
+                                        <h4>The Array module</h4>
+                                        <p>The Motoko standard library provides basic operations for immutable and mutable arrays. It can be imported as follows,</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">import Array "mo:base/Array";</p>
+                                            </div>
+                                        </div>
+                                        <h4>Mutable arrays</h4>
+                                        <p>Above, we introduced immutable arrays, which share the same projection syntax as mutable arrays, but do not permit mutable updates (assignments) after allocation. Unlike immutable arrays, each mutable array in Motoko introduces (private) mutable actor state.<br/>Because Motoko’s type system enforces that remote actors do not share their mutable state, the Motoko type system introduces a firm distinction between mutable and immutable arrays that impacts typing, subtyping and the language abstractions for asynchronous communication.</p>
+                                        <h4>Allocate a mutable array of constants</h4>
+                                        <p>To indicate allocation of mutable arrays (in contrast to the forms above, for immutable ones), the mutable array syntax [var _] uses the var keyword, in both the expression and type forms:</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">let a : [var Nat] = [var 1, 2, 3] ;</p>
+                                            </div>
+                                        </div>
+                                        <p>As above, the array a above holds three natural numbers, but has type [var Nat].</p>
+                                        <h4>Allocate a mutable array with dynamic size</h4>
+                                        <p>To allocate mutable arrays of non-constant size, use the Array_init primitive, and supply an initial value:</p>
+                                        <div>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">func init&lt;T&gt;(size : Nat,  x : T) : [var T]</p>
+                                            </div>
+                                            <p>For example:</p>
+                                            <div className="input-group mb-3">
+                                                <p className="form-control bg-body-secondary">var size : Nat = 42 ;<br/>let x : [var Nat] = Array.init&lt;Nat&generalt;(size, 3);</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
