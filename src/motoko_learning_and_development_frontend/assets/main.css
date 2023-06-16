@@ -78,7 +78,7 @@ h1 {
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     border-color: #f3f3fd;
     padding: 36px 28px;
     margin-top: 36px;
@@ -101,10 +101,10 @@ h1 {
     display: none;
 }
 
-.vert_tab_image_wrrapeer {
+/* .vert_tab_image_wrrapeer {
     display: flex;
     align-items: center;
-}
+} */
 
 .vert-tab-content h2 {
     font-family: "Poppins", sans-serif;
@@ -156,6 +156,7 @@ h1 {
 
 .recr-content.active .work_items_content {
     display: block;
+    width: 100%;
 }
 
 .recr-content img {

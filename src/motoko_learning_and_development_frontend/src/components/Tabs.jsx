@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import motokoImg from "../../assets/images/motoko.jpg"
+// import motokoImg from "../../assets/images/motoko.jpg"
 
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState('Home');
@@ -69,7 +69,6 @@ const Tabs = () => {
                                         <p>In this section, we explore the fundamentals of the Motoko language, namely its syntax, core data structures, flow control features, and the type system.If you have some prior programming experience this will hopefully be enough to get you started with Motoko.
                                         </p>
                                     </div>
-                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
