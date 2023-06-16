@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import motokoImg from "../../assets/images/motoko.jpg"
 
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState('Home');
@@ -68,7 +69,7 @@ const Tabs = () => {
                                         <p>In this section, we explore the fundamentals of the Motoko language, namely its syntax, core data structures, flow control features, and the type system.If you have some prior programming experience this will hopefully be enough to get you started with Motoko.
                                         </p>
                                     </div>
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
@@ -76,7 +77,7 @@ const Tabs = () => {
                             <h3>01. Comments</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                     <div className="vert-tab-content">
                                         <h2>01.</h2>
                                         <h4>Comments</h4>
@@ -180,7 +181,7 @@ const Tabs = () => {
                                         </div>
 
                                     </div>
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
@@ -188,7 +189,7 @@ const Tabs = () => {
                             <h3>02. Strings</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                     <div className="vert-tab-content">
                                         <h2>03.</h2>
                                         <h4>Booleans</h4>
@@ -313,7 +314,7 @@ const Tabs = () => {
                                             </div> 
                                         </div>
                                     </div>
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
@@ -321,7 +322,7 @@ const Tabs = () => {
                             <h3>05. Bounded integers</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                     <div className="vert-tab-content">
                                         <h2>05.</h2>
                                         <h4>Bounded integers</h4>
@@ -456,7 +457,7 @@ const Tabs = () => {
                                             </div>    
                                         </div>
                                     </div>
-                                    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/2X/5/5ab53a3b0fb2c1d9de26918ca2f6c7f0063576fc.jpeg" alt="Image" />
+                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
