@@ -8,8 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-duration: 0.5s;
-    scroll-timing-function: ease-in-out;
 }
 
 body {

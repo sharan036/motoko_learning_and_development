@@ -77,7 +77,6 @@ const Tabs = () => {
                             <h3>01. Comments</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
-                                    <img src={motokoImg} alt="Image" />
                                     <div className="vert-tab-content">
                                         <h2>01.</h2>
                                         <h4>Comments</h4>
@@ -179,9 +178,7 @@ const Tabs = () => {
                                                     Nat.toText(natVal)</p>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
@@ -189,7 +186,6 @@ const Tabs = () => {
                             <h3>03. Booleans</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
-                                    <img src={motokoImg} alt="Image" />
                                     <div className="vert-tab-content">
                                         <h2>03.</h2>
                                         <h4>Booleans</h4>
@@ -314,7 +310,6 @@ const Tabs = () => {
                                             </div> 
                                         </div>
                                     </div>
-                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
@@ -322,7 +317,6 @@ const Tabs = () => {
                             <h3>05. Bounded integers</h3>
                             <div className="work_items_content">
                                 <div className="vert_tab_image_wrrapeer">
-                                    <img src={motokoImg} alt="Image" />
                                     <div className="vert-tab-content">
                                         <h2>05.</h2>
                                         <h4>Bounded integers</h4>
@@ -457,7 +451,6 @@ const Tabs = () => {
                                             </div>    
                                         </div>
                                     </div>
-                                    <img src={motokoImg} alt="Image" />
                                 </div>
                             </div>
                         </div>
@@ -701,42 +694,6 @@ const Tabs = () => {
                                         <div>
                                             <div className="input-group mb-3">
                                                 <p className="form-control bg-body-secondary">import Iter "mo:base/Iter";<br/>import Debug "mo:base/Debug";<br/>var i = 0;<br/>for (j in Iter.range(0, 10)) &#123;<br/>&nbsp;&nbsp;Debug.print(debug_show(j));<br/>&nbsp;&nbsp;assert(j == i);<br/>&nbsp;&nbsp;i += 1;<br/>&#125;;<br/>assert(i == 11);</p>
-                                            </div>
-                                        </div>
-                                        <p>The array a above holds three natural numbers, and has type [Nat]. In general, the type of an immutable array is [_], using square brackets around the type of the array’s elements, which must share a single common type, in this case Nat.</p>
-                                        <h4>Project from (read from) an array index</h4>
-                                        <p>We can project from (read from) an array using the usual bracket syntax ([ and ]) around the index we want to access:</p>
-                                        <div>
-                                            <div className="input-group mb-3">
-                                                <p className="form-control bg-body-secondary">let x : Nat = a[2] + a[0] ;</p>
-                                            </div>
-                                        </div>
-                                        <h4>The Array module</h4>
-                                        <p>The Motoko standard library provides basic operations for immutable and mutable arrays. It can be imported as follows,</p>
-                                        <div>
-                                            <div className="input-group mb-3">
-                                                <p className="form-control bg-body-secondary">import Array "mo:base/Array";</p>
-                                            </div>
-                                        </div>
-                                        <h4>Mutable arrays</h4>
-                                        <p>Above, we introduced immutable arrays, which share the same projection syntax as mutable arrays, but do not permit mutable updates (assignments) after allocation. Unlike immutable arrays, each mutable array in Motoko introduces (private) mutable actor state.<br/>Because Motoko’s type system enforces that remote actors do not share their mutable state, the Motoko type system introduces a firm distinction between mutable and immutable arrays that impacts typing, subtyping and the language abstractions for asynchronous communication.</p>
-                                        <h4>Allocate a mutable array of constants</h4>
-                                        <p>To indicate allocation of mutable arrays (in contrast to the forms above, for immutable ones), the mutable array syntax [var _] uses the var keyword, in both the expression and type forms:</p>
-                                        <div>
-                                            <div className="input-group mb-3">
-                                                <p className="form-control bg-body-secondary">let a : [var Nat] = [var 1, 2, 3] ;</p>
-                                            </div>
-                                        </div>
-                                        <p>As above, the array a above holds three natural numbers, but has type [var Nat].</p>
-                                        <h4>Allocate a mutable array with dynamic size</h4>
-                                        <p>To allocate mutable arrays of non-constant size, use the Array_init primitive, and supply an initial value:</p>
-                                        <div>
-                                            <div className="input-group mb-3">
-                                                <p className="form-control bg-body-secondary">func init&lt;T&gt;(size : Nat,  x : T) : [var T]</p>
-                                            </div>
-                                            <p>For example:</p>
-                                            <div className="input-group mb-3">
-                                                <p className="form-control bg-body-secondary">var size : Nat = 42 ;<br/>let x : [var Nat] = Array.init&lt;Nat&generalt;(size, 3);</p>
                                             </div>
                                         </div>
                                     </div>
