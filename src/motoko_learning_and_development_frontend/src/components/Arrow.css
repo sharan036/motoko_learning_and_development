@@ -1,10 +1,10 @@
-.up-arrow {
+/* .up-arrow {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 40px;
     height: 40px;
-    border:2px solid #000;
+    background-color: #000;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -16,6 +16,11 @@
     transition: opacity 0.3s, visibility 0.3s;
   }
   
+  .up-arrow.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
   .arrow-icon {
     width: 16px;
     height: 16px;
@@ -23,7 +28,7 @@
     border-right: 2px solid #fff;
     transform: rotate(-45deg);
   }
-  
+   */
 
 .progress-wrap {
     position: fixed;

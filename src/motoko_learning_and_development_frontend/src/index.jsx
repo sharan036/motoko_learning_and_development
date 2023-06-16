@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Tabs from "./components/Tabs";
 import Container from 'react-bootstrap/Container';
 import UpArrow from "./components/Arrow";
+import Footer from "./components/Footer";
 
 const MyHello = () => {
   const [name, setName] = React.useState('');
@@ -26,6 +27,7 @@ const MyHello = () => {
         <Tabs/>
       </Container>
       <UpArrow/>
+      <Footer/>
     </Container>
     // <div style={{ "fontSize": "30px" }}>
     //   <div style={{ "backgroundColor": "yellow" }}>
